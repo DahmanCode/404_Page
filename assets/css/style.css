@@ -2,7 +2,7 @@
 
 :root {
   --header-height: 3.5rem;
-  --first-color: hsl(38, 69%, 59%);
+  --first-color: hsl(149, 69%, 59%);
   --text-color: hsl(38, 8%, 8%);
   --body-font: 'Space Grotesk', sans-serif;
   --biggest-font-size: 2.375rem;
@@ -121,4 +121,143 @@ img {
 }
 .show-menu {
   top: 0;
+}
+
+.home {
+  background-color: var(--first-color);
+  padding: 9rem 0 2rem;
+  height: 100vh;
+}
+
+.home_container {
+  display: grid;
+  align-items: center;
+  row-gap: 2.5rem;
+}
+
+.home_data {
+  text-align: center;
+}
+
+.home_subtitle {
+  display: block;
+}
+
+.home_title {
+  font-size: var(--biggest-font-size);
+  margin: .75rem 0;
+}
+
+.home_button {
+  margin-top: 2rem;
+  display: inline-block;
+  background-color: var(--text-color);
+  color: #fff;
+  padding: .8rem 1.5rem;
+  border-radius: 3rem;
+  transition: .4s;
+}
+
+.home_button:hover {
+  box-shadow: 0 4px 12px hsla(38, 69%, 8%, .2);
+}
+
+.home_img img {
+  width: 380px;
+  animation: floaty 1.8s infinite alternate;
+}
+
+.home_img {
+  justify-self: center;
+}
+
+.home_shadow {
+  width: 180px;
+  height: 34px;
+  background-color: hsla(38, 21%, 19%, .16);
+  margin: 0 auto;
+  border-radius: 50%;
+  filter: blur(7px);
+  animation: shadow 1.8s infinite alternate;
+}
+
+.home_footer {
+  position: absolute;
+  column-gap: .5rem;
+  font-size: var(--smaller-font-size);
+  bottom: 2rem;
+  right: 50%;
+  transform: translate(50%);
+}
+
+/* Animation */
+
+@keyframes floaty {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(15px);
+  }
+}
+
+@keyframes shadow {
+  0% {
+    transform: scale(1, 1);
+  }
+
+  100% {
+    transform: scale(.85, .85);
+  }
+}
+
+@media screen and (max-width: 320px){
+  .home {
+    padding-top: 7rem;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .nav {
+    height: calc(var(--header-height) + 1.5rem);
+  }
+
+  .nav_toggle,
+  .nav_close {
+    display: none;
+  }
+
+  .nav_list {
+    flex-direction: row;
+    column-gap: 3.5rem;
+  }
+}
+
+@media screen and (min-width: 1024px){
+  .home_container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    column-gap: 2rem;
+  }
+
+  .home_data {
+    text-align: initial;
+  }
+
+  .home_img img {
+    width: 500px;
+  }
+
+  .home_shadow {
+    width: 280px;
+    height: 50px;
+  }
+}
+
+@media screen and (min-width: 1070px){
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
