@@ -7,7 +7,7 @@
   --body-font: 'Space Grotesk', sans-serif;
   --biggest-font-size: 2.375rem;
   --normal-font-size: .938rem;
-  --smaller-font-size: .75rem;
+  --smaller-font-size: .65rem;
 }
 
 /* Responsive */
@@ -259,5 +259,22 @@ img {
   .container {
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 2048px){
+  body {
+    zoom: 1.7;
+  }
+
+  .home {
+    height: initial;
+    row-gap: 4rem;
+  }
+}
+
+@media screen and (min-width: 3840px){
+  body {
+    zoom: 3.1;
   }
 }
